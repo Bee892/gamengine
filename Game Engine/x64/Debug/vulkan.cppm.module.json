@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Game Engine\\x64\\Debug\\vulkan.cppm.obj",
+            "outputs": [
+                "D:\\gamengine\\Game Engine\\x64\\Debug\\vc143.pdb",
+                "Game Engine\\x64\\Debug\\",
+                "D:\\gamengine\\Game Engine\\x64\\Debug\\vulkan.cppm.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "vulkan_hpp",
+                    "source-path": "d:\\gamengine\\headers\\vulkan\\include\\vulkan\\vulkan.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

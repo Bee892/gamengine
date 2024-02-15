@@ -1,0 +1,10 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: Two or more files with the name of glm.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are headers\glm\detail\glm.cpp, headers\vulkan\include\glm\detail\glm.cpp.
+  Scanning sources for module dependencies...
+  Compiling...
+  vulkan.cppm
+D:\gamengine\headers\vulkan\include\vulkan\vulkan.cppm(4742,1): error C1001: Internal compiler error.
+D:\gamengine\headers\vulkan\include\vulkan\vulkan.cppm(4742,1): error C1001: (compiler file 'D:\a\_work\1\s\src\vctools\Compiler\CxxFE\sl\p1\c\ParseTree.cpp', line 114)
+D:\gamengine\headers\vulkan\include\vulkan\vulkan.cppm(4742,1): error C1001:  To work around this problem, try simplifying or changing the program near the locations listed above.
+D:\gamengine\headers\vulkan\include\vulkan\vulkan.cppm(4742,1): error C1001: If possible please provide a repro here: https://developercommunity.visualstudio.com 
+D:\gamengine\headers\vulkan\include\vulkan\vulkan.cppm(4742,1): error C1001: Please choose the Technical Support command on the Visual C++ 
+D:\gamengine\headers\vulkan\include\vulkan\vulkan.cppm(4742,1): error C1001:  Help menu, or open the Technical Support help file for more information

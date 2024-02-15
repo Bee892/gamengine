@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Game Engine\\x64\\Debug\\glm.cppm.obj",
+            "outputs": [
+                "D:\\gamengine\\Game Engine\\x64\\Debug\\vc143.pdb",
+                "Game Engine\\x64\\Debug\\",
+                "D:\\gamengine\\Game Engine\\x64\\Debug\\glm.cppm.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "glm",
+                    "source-path": "d:\\gamengine\\headers\\glm\\glm.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

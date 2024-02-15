@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{12B42934-1654-4787-85B7-5637EB3CAF50}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Headers\glm;$(ProjectDir)\Headers\GLFW\include;$(ProjectDir)\Headers\Vulkan\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(ProjectDir)\Headers\Vulkan\Lib;$(ProjectDir)\Headers\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Headers\glm;$(ProjectDir)\Headers\GLFW\include;$(ProjectDir)\Headers\Vulkan\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(ProjectDir)\Headers\Vulkan\Lib;$(ProjectDir)\Headers\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Headers\glm;$(ProjectDir)\Headers\GLFW\include;$(ProjectDir)\Headers\Vulkan\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)\Headers\Vulkan\Lib;$(ProjectDir)\Headers\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Headers\glm;$(ProjectDir)\Headers\GLFW\include;$(ProjectDir)\Headers\Vulkan\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)\Headers\Vulkan\Lib;$(ProjectDir)\Headers\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="headers\glm\detail\glm.cpp" />
+    <ClCompile Include="headers\glm\glm.cppm" />
+    <ClCompile Include="headers\vulkan\include\glm\detail\glm.cpp" />
+    <ClCompile Include="headers\vulkan\include\volk\volk.c" />
+    <ClCompile Include="headers\vulkan\include\vulkan\vulkan.cppm" />
+    <ClCompile Include="Phys.cpp" />
+    <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="RescManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\glfw\include\glfw\glfw3.h" />
+    <ClInclude Include="headers\glfw\include\glfw\glfw3native.h" />
+    <ClInclude Include="headers\glm\common.hpp" />
+    <ClInclude Include="headers\glm\detail\compute_common.hpp" />
+    <ClInclude Include="headers\glm\detail\compute_vector_relational.hpp" />
+    <ClInclude Include="headers\glm\detail\qualifier.hpp" />
+    <ClInclude Include="headers\glm\detail\setup.hpp" />
+    <ClInclude Include="headers\glm\detail\type_float.hpp" />
+    <ClInclude Include="headers\glm\detail\type_half.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat2x2.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat2x3.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat2x4.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat3x2.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat3x3.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat3x4.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat4x2.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat4x3.hpp" />
+    <ClInclude Include="headers\glm\detail\type_mat4x4.hpp" />
+    <ClInclude Include="headers\glm\detail\type_quat.hpp" />
+    <ClInclude Include="headers\glm\detail\type_vec1.hpp" />
+    <ClInclude Include="headers\glm\detail\type_vec2.hpp" />
+    <ClInclude Include="headers\glm\detail\type_vec3.hpp" />
+    <ClInclude Include="headers\glm\detail\type_vec4.hpp" />
+    <ClInclude Include="headers\glm\detail\_features.hpp" />
+    <ClInclude Include="headers\glm\detail\_fixes.hpp" />
+    <ClInclude Include="headers\glm\detail\_noise.hpp" />
+    <ClInclude Include="headers\glm\detail\_swizzle.hpp" />
+    <ClInclude Include="headers\glm\detail\_swizzle_func.hpp" />
+    <ClInclude Include="headers\glm\detail\_vectorize.hpp" />
+    <ClInclude Include="headers\glm\exponential.hpp" />
+    <ClInclude Include="headers\glm\ext.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_clip_space.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_common.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double2x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double2x2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double2x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double2x3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double2x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double2x4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double3x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double3x2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double3x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double3x3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double3x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double3x4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double4x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double4x2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double4x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double4x3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double4x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_double4x4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float2x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float2x2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float2x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float2x3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float2x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float2x4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float3x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float3x2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float3x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float3x3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float3x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float3x4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float4x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float4x2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float4x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float4x3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float4x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_float4x4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int2x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int2x2_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int2x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int2x3_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int2x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int2x4_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int3x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int3x2_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int3x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int3x3_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int3x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int3x4_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int4x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int4x2_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int4x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int4x3_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int4x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_int4x4_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_integer.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_projection.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_relational.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_transform.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint2x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint2x2_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint2x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint2x3_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint2x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint2x4_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint3x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint3x2_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint3x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint3x3_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint3x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint3x4_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint4x2.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint4x2_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint4x3.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint4x3_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint4x4.hpp" />
+    <ClInclude Include="headers\glm\ext\matrix_uint4x4_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_common.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_double.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_double_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_exponential.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_float.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_float_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_geometric.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_relational.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_transform.hpp" />
+    <ClInclude Include="headers\glm\ext\quaternion_trigonometric.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_common.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_constants.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_integer.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_int_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_packing.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_reciprocal.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_relational.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_uint_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\scalar_ulp.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_bool1.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_bool1_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_bool2.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_bool2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_bool3.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_bool3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_bool4.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_bool4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_common.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_double1.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_double1_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_double2.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_double2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_double3.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_double3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_double4.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_double4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_float1.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_float1_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_float2.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_float2_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_float3.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_float3_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_float4.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_float4_precision.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_int1.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_int1_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_int2.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_int2_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_int3.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_int3_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_int4.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_int4_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_integer.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_packing.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_reciprocal.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_relational.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_uint1.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_uint1_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_uint2.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_uint2_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_uint3.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_uint3_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_uint4.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_uint4_sized.hpp" />
+    <ClInclude Include="headers\glm\ext\vector_ulp.hpp" />
+    <ClInclude Include="headers\glm\ext\_matrix_vectorize.hpp" />
+    <ClInclude Include="headers\glm\fwd.hpp" />
+    <ClInclude Include="headers\glm\geometric.hpp" />
+    <ClInclude Include="headers\glm\glm.hpp" />
+    <ClInclude Include="headers\glm\gtc\bitfield.hpp" />
+    <ClInclude Include="headers\glm\gtc\color_space.hpp" />
+    <ClInclude Include="headers\glm\gtc\constants.hpp" />
+    <ClInclude Include="headers\glm\gtc\epsilon.hpp" />
+    <ClInclude Include="headers\glm\gtc\integer.hpp" />
+    <ClInclude Include="headers\glm\gtc\matrix_access.hpp" />
+    <ClInclude Include="headers\glm\gtc\matrix_integer.hpp" />
+    <ClInclude Include="headers\glm\gtc\matrix_inverse.hpp" />
+    <ClInclude Include="headers\glm\gtc\matrix_transform.hpp" />
+    <ClInclude Include="headers\glm\gtc\noise.hpp" />
+    <ClInclude Include="headers\glm\gtc\packing.hpp" />
+    <ClInclude Include="headers\glm\gtc\quaternion.hpp" />
+    <ClInclude Include="headers\glm\gtc\random.hpp" />
+    <ClInclude Include="headers\glm\gtc\reciprocal.hpp" />
+    <ClInclude Include="headers\glm\gtc\round.hpp" />
+    <ClInclude Include="headers\glm\gtc\type_aligned.hpp" />
+    <ClInclude Include="headers\glm\gtc\type_precision.hpp" />
+    <ClInclude Include="headers\glm\gtc\type_ptr.hpp" />
+    <ClInclude Include="headers\glm\gtc\ulp.hpp" />
+    <ClInclude Include="headers\glm\gtc\vec1.hpp" />
+    <ClInclude Include="headers\glm\gtx\associated_min_max.hpp" />
+    <ClInclude Include="headers\glm\gtx\bit.hpp" />
+    <ClInclude Include="headers\glm\gtx\closest_point.hpp" />
+    <ClInclude Include="headers\glm\gtx\color_encoding.hpp" />
+    <ClInclude Include="headers\glm\gtx\color_space.hpp" />
+    <ClInclude Include="headers\glm\gtx\color_space_YCoCg.hpp" />
+    <ClInclude Include="headers\glm\gtx\common.hpp" />
+    <ClInclude Include="headers\glm\gtx\compatibility.hpp" />
+    <ClInclude Include="headers\glm\gtx\component_wise.hpp" />
+    <ClInclude Include="headers\glm\gtx\dual_quaternion.hpp" />
+    <ClInclude Include="headers\glm\gtx\easing.hpp" />
+    <ClInclude Include="headers\glm\gtx\euler_angles.hpp" />
+    <ClInclude Include="headers\glm\gtx\extend.hpp" />
+    <ClInclude Include="headers\glm\gtx\extended_min_max.hpp" />
+    <ClInclude Include="headers\glm\gtx\exterior_product.hpp" />
+    <ClInclude Include="headers\glm\gtx\fast_exponential.hpp" />
+    <ClInclude Include="headers\glm\gtx\fast_square_root.hpp" />
+    <ClInclude Include="headers\glm\gtx\fast_trigonometry.hpp" />
+    <ClInclude Include="headers\glm\gtx\functions.hpp" />
+    <ClInclude Include="headers\glm\gtx\gradient_paint.hpp" />
+    <ClInclude Include="headers\glm\gtx\handed_coordinate_space.hpp" />
+    <ClInclude Include="headers\glm\gtx\hash.hpp" />
+    <ClInclude Include="headers\glm\gtx\integer.hpp" />
+    <ClInclude Include="headers\glm\gtx\intersect.hpp" />
+    <ClInclude Include="headers\glm\gtx\io.hpp" />
+    <ClInclude Include="headers\glm\gtx\log_base.hpp" />
+    <ClInclude Include="headers\glm\gtx\matrix_cross_product.hpp" />
+    <ClInclude Include="headers\glm\gtx\matrix_decompose.hpp" />
+    <ClInclude Include="headers\glm\gtx\matrix_factorisation.hpp" />
+    <ClInclude Include="headers\glm\gtx\matrix_interpolation.hpp" />
+    <ClInclude Include="headers\glm\gtx\matrix_major_storage.hpp" />
+    <ClInclude Include="headers\glm\gtx\matrix_operation.hpp" />
+    <ClInclude Include="headers\glm\gtx\matrix_query.hpp" />
+    <ClInclude Include="headers\glm\gtx\matrix_transform_2d.hpp" />
+    <ClInclude Include="headers\glm\gtx\mixed_product.hpp" />
+    <ClInclude Include="headers\glm\gtx\norm.hpp" />
+    <ClInclude Include="headers\glm\gtx\normal.hpp" />
+    <ClInclude Include="headers\glm\gtx\normalize_dot.hpp" />
+    <ClInclude Include="headers\glm\gtx\number_precision.hpp" />
+    <ClInclude Include="headers\glm\gtx\optimum_pow.hpp" />
+    <ClInclude Include="headers\glm\gtx\orthonormalize.hpp" />
+    <ClInclude Include="headers\glm\gtx\pca.hpp" />
+    <ClInclude Include="headers\glm\gtx\perpendicular.hpp" />
+    <ClInclude Include="headers\glm\gtx\polar_coordinates.hpp" />
+    <ClInclude Include="headers\glm\gtx\projection.hpp" />
+    <ClInclude Include="headers\glm\gtx\quaternion.hpp" />
+    <ClInclude Include="headers\glm\gtx\range.hpp" />
+    <ClInclude Include="headers\glm\gtx\raw_data.hpp" />
+    <ClInclude Include="headers\glm\gtx\rotate_normalized_axis.hpp" />
+    <ClInclude Include="headers\glm\gtx\rotate_vector.hpp" />
+    <ClInclude Include="headers\glm\gtx\scalar_multiplication.hpp" />
+    <ClInclude Include="headers\glm\gtx\scalar_relational.hpp" />
+    <ClInclude Include="headers\glm\gtx\spline.hpp" />
+    <ClInclude Include="headers\glm\gtx\std_based_type.hpp" />
+    <ClInclude Include="headers\glm\gtx\string_cast.hpp" />
+    <ClInclude Include="headers\glm\gtx\texture.hpp" />
+    <ClInclude Include="headers\glm\gtx\transform.hpp" />
+    <ClInclude Include="headers\glm\gtx\transform2.hpp" />
+    <ClInclude Include="headers\glm\gtx\type_aligned.hpp" />
+    <ClInclude Include="headers\glm\gtx\type_trait.hpp" />
+    <ClInclude Include="headers\glm\gtx\vector_angle.hpp" />
+    <ClInclude Include="headers\glm\gtx\vector_query.hpp" />
+    <ClInclude Include="headers\glm\gtx\vec_swizzle.hpp" />
+    <ClInclude Include="headers\glm\gtx\wrap.hpp" />
+    <ClInclude Include="headers\glm\integer.hpp" />
+    <ClInclude Include="headers\glm\mat2x2.hpp" />
+    <ClInclude Include="headers\glm\mat2x3.hpp" />
+    <ClInclude Include="headers\glm\mat2x4.hpp" />
+    <ClInclude Include="headers\glm\mat3x2.hpp" />
+    <ClInclude Include="headers\glm\mat3x3.hpp" />
+    <ClInclude Include="headers\glm\mat3x4.hpp" />
+    <ClInclude Include="headers\glm\mat4x2.hpp" />
+    <ClInclude Include="headers\glm\mat4x3.hpp" />
+    <ClInclude Include="headers\glm\mat4x4.hpp" />
+    <ClInclude Include="headers\glm\matrix.hpp" />
+    <ClInclude Include="headers\glm\packing.hpp" />
+    <ClInclude Include="headers\glm\simd\common.h" />
+    <ClInclude Include="headers\glm\simd\exponential.h" />
+    <ClInclude Include="headers\glm\simd\geometric.h" />
+    <ClInclude Include="headers\glm\simd\integer.h" />
+    <ClInclude Include="headers\glm\simd\matrix.h" />
+    <ClInclude Include="headers\glm\simd\neon.h" />
+    <ClInclude Include="headers\glm\simd\packing.h" />
+    <ClInclude Include="headers\glm\simd\platform.h" />
+    <ClInclude Include="headers\glm\simd\trigonometric.h" />
+    <ClInclude Include="headers\glm\simd\vector_relational.h" />
+    <ClInclude Include="headers\glm\trigonometric.hpp" />
+    <ClInclude Include="headers\glm\vec2.hpp" />
+    <ClInclude Include="headers\glm\vec3.hpp" />
+    <ClInclude Include="headers\glm\vec4.hpp" />
+    <ClInclude Include="headers\glm\vector_relational.hpp" />
+    <ClInclude Include="headers\vulkan\include\dxc\dxcapi.h" />
+    <ClInclude Include="headers\vulkan\include\dxc\WinAdapter.h" />
+    <ClInclude Include="headers\vulkan\include\glm\common.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\compute_common.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\compute_vector_relational.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\qualifier.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\setup.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_float.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_half.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat2x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat2x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat2x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat3x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat3x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat3x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat4x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat4x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_mat4x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_quat.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_vec1.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_vec2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_vec3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\type_vec4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\_features.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\_fixes.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\_noise.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\_swizzle.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\_swizzle_func.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\detail\_vectorize.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\exponential.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_clip_space.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_common.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double2x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double2x2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double2x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double2x3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double2x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double2x4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double3x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double3x2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double3x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double3x3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double3x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double3x4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double4x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double4x2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double4x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double4x3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double4x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_double4x4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float2x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float2x2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float2x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float2x3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float2x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float2x4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float3x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float3x2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float3x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float3x3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float3x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float3x4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float4x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float4x2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float4x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float4x3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float4x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_float4x4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int2x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int2x2_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int2x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int2x3_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int2x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int2x4_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int3x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int3x2_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int3x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int3x3_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int3x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int3x4_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int4x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int4x2_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int4x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int4x3_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int4x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_int4x4_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_projection.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_relational.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_transform.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint2x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint2x2_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint2x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint2x3_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint2x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint2x4_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint3x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint3x2_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint3x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint3x3_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint3x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint3x4_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint4x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint4x2_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint4x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint4x3_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint4x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\matrix_uint4x4_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_common.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_double.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_double_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_exponential.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_float.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_float_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_geometric.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_relational.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_transform.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\quaternion_trigonometric.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\scalar_common.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\scalar_constants.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\scalar_integer.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\scalar_int_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\scalar_packing.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\scalar_relational.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\scalar_uint_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\scalar_ulp.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_bool1.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_bool1_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_bool2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_bool2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_bool3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_bool3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_bool4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_bool4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_common.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_double1.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_double1_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_double2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_double2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_double3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_double3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_double4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_double4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_float1.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_float1_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_float2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_float2_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_float3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_float3_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_float4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_float4_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_int1.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_int1_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_int2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_int2_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_int3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_int3_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_int4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_int4_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_integer.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_packing.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_relational.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_uint1.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_uint1_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_uint2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_uint2_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_uint3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_uint3_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_uint4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_uint4_sized.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\ext\vector_ulp.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\fwd.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\geometric.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\glm.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\bitfield.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\color_space.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\constants.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\epsilon.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\integer.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\matrix_access.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\matrix_integer.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\matrix_inverse.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\matrix_transform.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\noise.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\packing.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\quaternion.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\random.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\reciprocal.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\round.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\type_aligned.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\type_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\type_ptr.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\ulp.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtc\vec1.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\associated_min_max.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\bit.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\closest_point.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\color_encoding.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\color_space.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\color_space_YCoCg.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\common.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\compatibility.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\component_wise.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\dual_quaternion.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\easing.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\euler_angles.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\extend.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\extended_min_max.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\exterior_product.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\fast_exponential.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\fast_square_root.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\fast_trigonometry.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\functions.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\gradient_paint.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\handed_coordinate_space.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\hash.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\integer.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\intersect.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\io.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\log_base.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\matrix_cross_product.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\matrix_decompose.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\matrix_factorisation.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\matrix_interpolation.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\matrix_major_storage.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\matrix_operation.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\matrix_query.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\matrix_transform_2d.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\mixed_product.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\norm.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\normal.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\normalize_dot.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\number_precision.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\optimum_pow.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\orthonormalize.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\perpendicular.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\polar_coordinates.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\projection.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\quaternion.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\range.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\raw_data.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\rotate_normalized_axis.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\rotate_vector.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\scalar_multiplication.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\scalar_relational.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\spline.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\std_based_type.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\string_cast.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\texture.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\transform.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\transform2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\type_aligned.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\type_trait.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\vector_angle.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\vector_query.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\vec_swizzle.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\gtx\wrap.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\integer.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat2x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat2x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat2x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat3x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat3x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat3x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat4x2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat4x3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\mat4x4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\matrix.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\packing.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\common.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\exponential.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\geometric.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\integer.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\matrix.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\neon.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\packing.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\platform.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\trigonometric.h" />
+    <ClInclude Include="headers\vulkan\include\glm\simd\vector_relational.h" />
+    <ClInclude Include="headers\vulkan\include\glm\trigonometric.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\vec2.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\vec3.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\vec4.hpp" />
+    <ClInclude Include="headers\vulkan\include\glm\vector_relational.hpp" />
+    <ClInclude Include="headers\vulkan\include\glslang\include\glslang_c_interface.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\include\glslang_c_shader_types.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\include\ResourceLimits.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\machineindependent\Versions.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\public\ResourceLimits.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\public\resource_limits_c.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\public\ShaderLang.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\spirv\GlslangToSpv.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\spirv\Logger.h" />
+    <ClInclude Include="headers\vulkan\include\glslang\spirv\spirv.hpp" />
+    <ClInclude Include="headers\vulkan\include\glslang\spirv\SPVRemapper.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\begin_code.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\close_code.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_assert.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_atomic.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_audio.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_bits.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_blendmode.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_clipboard.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_config.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_copying.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_cpuinfo.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_egl.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_endian.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_error.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_events.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_filesystem.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_gamecontroller.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_gesture.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_guid.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_haptic.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_hidapi.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_hints.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_joystick.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_keyboard.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_keycode.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_loadso.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_locale.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_log.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_main.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_messagebox.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_metal.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_misc.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_mouse.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_mutex.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_name.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_opengl.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_opengles.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_opengles2.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_opengles2_gl2.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_opengl_glext.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_pixels.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_platform.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_power.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_quit.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_rect.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_render.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_revision.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_rwops.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_scancode.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_sensor.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_shape.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_stdinc.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_surface.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_system.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_syswm.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_assert.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_common.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_compare.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_crc32.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_font.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_fuzzer.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_harness.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_images.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_log.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_md5.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_memory.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_test_random.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_thread.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_timer.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_touch.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_types.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_version.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_video.h" />
+    <ClInclude Include="headers\vulkan\include\sdl2\SDL_vulkan.h" />
+    <ClInclude Include="headers\vulkan\include\shaderc\env.h" />
+    <ClInclude Include="headers\vulkan\include\shaderc\shaderc.h" />
+    <ClInclude Include="headers\vulkan\include\shaderc\shaderc.hpp" />
+    <ClInclude Include="headers\vulkan\include\shaderc\status.h" />
+    <ClInclude Include="headers\vulkan\include\shaderc\visibility.h" />
+    <ClInclude Include="headers\vulkan\include\spirv-headers\GLSL.std.450.h" />
+    <ClInclude Include="headers\vulkan\include\spirv-headers\spirv.h" />
+    <ClInclude Include="headers\vulkan\include\spirv-headers\spirv.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv-tools\libspirv.h" />
+    <ClInclude Include="headers\vulkan\include\spirv-tools\libspirv.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv-tools\linker.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv-tools\optimizer.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\GLSL.std.450.h" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv.h" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_cfg.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_common.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_cross.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_cross_c.h" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_cross_containers.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_cross_error_handling.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_cross_parsed_ir.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_glsl.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_hlsl.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_msl.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_parser.hpp" />
+    <ClInclude Include="headers\vulkan\include\spirv_cross\spirv_reflect.hpp" />
+    <ClInclude Include="headers\vulkan\include\vk_video\vulkan_video_codecs_common.h" />
+    <ClInclude Include="headers\vulkan\include\vk_video\vulkan_video_codec_h264std.h" />
+    <ClInclude Include="headers\vulkan\include\vk_video\vulkan_video_codec_h264std_decode.h" />
+    <ClInclude Include="headers\vulkan\include\vk_video\vulkan_video_codec_h264std_encode.h" />
+    <ClInclude Include="headers\vulkan\include\vk_video\vulkan_video_codec_h265std.h" />
+    <ClInclude Include="headers\vulkan\include\vk_video\vulkan_video_codec_h265std_decode.h" />
+    <ClInclude Include="headers\vulkan\include\vk_video\vulkan_video_codec_h265std_encode.h" />
+    <ClInclude Include="headers\vulkan\include\vma\vk_mem_alloc.h" />
+    <ClInclude Include="headers\vulkan\include\volk\volk.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\utility\vk_format_utils.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vk_enum_string_helper.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vk_icd.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vk_layer.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vk_platform.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_android.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_beta.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_core.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_directfb.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_enums.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_extension_inspection.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_format_traits.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_fuchsia.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_funcs.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_ggp.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_handles.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_hash.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_hpp_macros.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_ios.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_macos.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_metal.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_profiles.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_raii.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_screen.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_shared.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_static_assertions.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_structs.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_to_string.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_vi.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_video.hpp" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_wayland.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_win32.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_xcb.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_xlib.h" />
+    <ClInclude Include="headers\vulkan\include\vulkan\vulkan_xlib_xrandr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\gamengine\v17\workspaceFileList.bin" />
+    <None Include="headers\glfw\docs\html\build_8dox.html" />
+    <None Include="headers\glfw\docs\html\build_guide.html" />
+    <None Include="headers\glfw\docs\html\compat_8dox.html" />
+    <None Include="headers\glfw\docs\html\compat_guide.html" />
+    <None Include="headers\glfw\docs\html\compile_8dox.html" />
+    <None Include="headers\glfw\docs\html\compile_guide.html" />
+    <None Include="headers\glfw\docs\html\context_8dox.html" />
+    <None Include="headers\glfw\docs\html\context_guide.html" />
+    <None Include="headers\glfw\docs\html\deprecated.html" />
+    <None Include="headers\glfw\docs\html\dir_08423ce7729c4554356a7de7171ba263.html" />
+    <None Include="headers\glfw\docs\html\dir_2dcebcdf14b42e92a6ed85c61bda6b9d.html" />
+    <None Include="headers\glfw\docs\html\dir_62ce056722ee97c199075aa1d6eca309.html" />
+    <None Include="headers\glfw\docs\html\dir_dddf4cf62655095a666cf715de3a31a2.html" />
+    <None Include="headers\glfw\docs\html\files.html" />
+    <None Include="headers\glfw\docs\html\glfw3native_8h.html" />
+    <None Include="headers\glfw\docs\html\glfw3native_8h_source.html" />
+    <None Include="headers\glfw\docs\html\glfw3_8h.html" />
+    <None Include="headers\glfw\docs\html\glfw3_8h_source.html" />
+    <None Include="headers\glfw\docs\html\group__buttons.html" />
+    <None Include="headers\glfw\docs\html\group__context.html" />
+    <None Include="headers\glfw\docs\html\group__errors.html" />
+    <None Include="headers\glfw\docs\html\group__gamepad__axes.html" />
+    <None Include="headers\glfw\docs\html\group__gamepad__buttons.html" />
+    <None Include="headers\glfw\docs\html\group__hat__state.html" />
+    <None Include="headers\glfw\docs\html\group__init.html" />
+    <None Include="headers\glfw\docs\html\group__input.html" />
+    <None Include="headers\glfw\docs\html\group__joysticks.html" />
+    <None Include="headers\glfw\docs\html\group__keys.html" />
+    <None Include="headers\glfw\docs\html\group__mods.html" />
+    <None Include="headers\glfw\docs\html\group__monitor.html" />
+    <None Include="headers\glfw\docs\html\group__native.html" />
+    <None Include="headers\glfw\docs\html\group__shapes.html" />
+    <None Include="headers\glfw\docs\html\group__vulkan.html" />
+    <None Include="headers\glfw\docs\html\group__window.html" />
+    <None Include="headers\glfw\docs\html\index.html" />
+    <None Include="headers\glfw\docs\html\input_8dox.html" />
+    <None Include="headers\glfw\docs\html\input_guide.html" />
+    <None Include="headers\glfw\docs\html\internals_guide.html" />
+    <None Include="headers\glfw\docs\html\internal_8dox.html" />
+    <None Include="headers\glfw\docs\html\intro_8dox.html" />
+    <None Include="headers\glfw\docs\html\intro_guide.html" />
+    <None Include="headers\glfw\docs\html\main_8dox.html" />
+    <None Include="headers\glfw\docs\html\modules.html" />
+    <None Include="headers\glfw\docs\html\monitor_8dox.html" />
+    <None Include="headers\glfw\docs\html\monitor_guide.html" />
+    <None Include="headers\glfw\docs\html\moving_8dox.html" />
+    <None Include="headers\glfw\docs\html\moving_guide.html" />
+    <None Include="headers\glfw\docs\html\news.html" />
+    <None Include="headers\glfw\docs\html\news_8dox.html" />
+    <None Include="headers\glfw\docs\html\pages.html" />
+    <None Include="headers\glfw\docs\html\quick_8dox.html" />
+    <None Include="headers\glfw\docs\html\quick_guide.html" />
+    <None Include="headers\glfw\docs\html\struct_g_l_f_wgamepadstate.html" />
+    <None Include="headers\glfw\docs\html\struct_g_l_f_wgammaramp.html" />
+    <None Include="headers\glfw\docs\html\struct_g_l_f_wimage.html" />
+    <None Include="headers\glfw\docs\html\struct_g_l_f_wvidmode.html" />
+    <None Include="headers\glfw\docs\html\vulkan_8dox.html" />
+    <None Include="headers\glfw\docs\html\vulkan_guide.html" />
+    <None Include="headers\glfw\docs\html\window_8dox.html" />
+    <None Include="headers\glfw\docs\html\window_guide.html" />
+    <None Include="headers\glm\detail\func_common.inl" />
+    <None Include="headers\glm\detail\func_common_simd.inl" />
+    <None Include="headers\glm\detail\func_exponential.inl" />
+    <None Include="headers\glm\detail\func_exponential_simd.inl" />
+    <None Include="headers\glm\detail\func_geometric.inl" />
+    <None Include="headers\glm\detail\func_geometric_simd.inl" />
+    <None Include="headers\glm\detail\func_integer.inl" />
+    <None Include="headers\glm\detail\func_integer_simd.inl" />
+    <None Include="headers\glm\detail\func_matrix.inl" />
+    <None Include="headers\glm\detail\func_matrix_simd.inl" />
+    <None Include="headers\glm\detail\func_packing.inl" />
+    <None Include="headers\glm\detail\func_packing_simd.inl" />
+    <None Include="headers\glm\detail\func_trigonometric.inl" />
+    <None Include="headers\glm\detail\func_trigonometric_simd.inl" />
+    <None Include="headers\glm\detail\func_vector_relational.inl" />
+    <None Include="headers\glm\detail\func_vector_relational_simd.inl" />
+    <None Include="headers\glm\detail\type_half.inl" />
+    <None Include="headers\glm\detail\type_mat2x2.inl" />
+    <None Include="headers\glm\detail\type_mat2x3.inl" />
+    <None Include="headers\glm\detail\type_mat2x4.inl" />
+    <None Include="headers\glm\detail\type_mat3x2.inl" />
+    <None Include="headers\glm\detail\type_mat3x3.inl" />
+    <None Include="headers\glm\detail\type_mat3x4.inl" />
+    <None Include="headers\glm\detail\type_mat4x2.inl" />
+    <None Include="headers\glm\detail\type_mat4x3.inl" />
+    <None Include="headers\glm\detail\type_mat4x4.inl" />
+    <None Include="headers\glm\detail\type_mat4x4_simd.inl" />
+    <None Include="headers\glm\detail\type_quat.inl" />
+    <None Include="headers\glm\detail\type_quat_simd.inl" />
+    <None Include="headers\glm\detail\type_vec1.inl" />
+    <None Include="headers\glm\detail\type_vec2.inl" />
+    <None Include="headers\glm\detail\type_vec3.inl" />
+    <None Include="headers\glm\detail\type_vec4.inl" />
+    <None Include="headers\glm\detail\type_vec4_simd.inl" />
+    <None Include="headers\glm\ext\matrix_clip_space.inl" />
+    <None Include="headers\glm\ext\matrix_common.inl" />
+    <None Include="headers\glm\ext\matrix_integer.inl" />
+    <None Include="headers\glm\ext\matrix_projection.inl" />
+    <None Include="headers\glm\ext\matrix_relational.inl" />
+    <None Include="headers\glm\ext\matrix_transform.inl" />
+    <None Include="headers\glm\ext\quaternion_common.inl" />
+    <None Include="headers\glm\ext\quaternion_common_simd.inl" />
+    <None Include="headers\glm\ext\quaternion_exponential.inl" />
+    <None Include="headers\glm\ext\quaternion_geometric.inl" />
+    <None Include="headers\glm\ext\quaternion_relational.inl" />
+    <None Include="headers\glm\ext\quaternion_transform.inl" />
+    <None Include="headers\glm\ext\quaternion_trigonometric.inl" />
+    <None Include="headers\glm\ext\scalar_common.inl" />
+    <None Include="headers\glm\ext\scalar_constants.inl" />
+    <None Include="headers\glm\ext\scalar_integer.inl" />
+    <None Include="headers\glm\ext\scalar_packing.inl" />
+    <None Include="headers\glm\ext\scalar_reciprocal.inl" />
+    <None Include="headers\glm\ext\scalar_relational.inl" />
+    <None Include="headers\glm\ext\scalar_ulp.inl" />
+    <None Include="headers\glm\ext\vector_common.inl" />
+    <None Include="headers\glm\ext\vector_integer.inl" />
+    <None Include="headers\glm\ext\vector_packing.inl" />
+    <None Include="headers\glm\ext\vector_reciprocal.inl" />
+    <None Include="headers\glm\ext\vector_relational.inl" />
+    <None Include="headers\glm\ext\vector_ulp.inl" />
+    <None Include="headers\glm\gtc\bitfield.inl" />
+    <None Include="headers\glm\gtc\color_space.inl" />
+    <None Include="headers\glm\gtc\constants.inl" />
+    <None Include="headers\glm\gtc\epsilon.inl" />
+    <None Include="headers\glm\gtc\integer.inl" />
+    <None Include="headers\glm\gtc\matrix_access.inl" />
+    <None Include="headers\glm\gtc\matrix_inverse.inl" />
+    <None Include="headers\glm\gtc\matrix_transform.inl" />
+    <None Include="headers\glm\gtc\noise.inl" />
+    <None Include="headers\glm\gtc\packing.inl" />
+    <None Include="headers\glm\gtc\quaternion.inl" />
+    <None Include="headers\glm\gtc\quaternion_simd.inl" />
+    <None Include="headers\glm\gtc\random.inl" />
+    <None Include="headers\glm\gtc\round.inl" />
+    <None Include="headers\glm\gtc\type_precision.inl" />
+    <None Include="headers\glm\gtc\type_ptr.inl" />
+    <None Include="headers\glm\gtc\ulp.inl" />
+    <None Include="headers\glm\gtx\associated_min_max.inl" />
+    <None Include="headers\glm\gtx\bit.inl" />
+    <None Include="headers\glm\gtx\closest_point.inl" />
+    <None Include="headers\glm\gtx\color_encoding.inl" />
+    <None Include="headers\glm\gtx\color_space.inl" />
+    <None Include="headers\glm\gtx\color_space_YCoCg.inl" />
+    <None Include="headers\glm\gtx\common.inl" />
+    <None Include="headers\glm\gtx\compatibility.inl" />
+    <None Include="headers\glm\gtx\component_wise.inl" />
+    <None Include="headers\glm\gtx\dual_quaternion.inl" />
+    <None Include="headers\glm\gtx\easing.inl" />
+    <None Include="headers\glm\gtx\euler_angles.inl" />
+    <None Include="headers\glm\gtx\extend.inl" />
+    <None Include="headers\glm\gtx\extended_min_max.inl" />
+    <None Include="headers\glm\gtx\exterior_product.inl" />
+    <None Include="headers\glm\gtx\fast_exponential.inl" />
+    <None Include="headers\glm\gtx\fast_square_root.inl" />
+    <None Include="headers\glm\gtx\fast_trigonometry.inl" />
+    <None Include="headers\glm\gtx\float_notmalize.inl" />
+    <None Include="headers\glm\gtx\functions.inl" />
+    <None Include="headers\glm\gtx\gradient_paint.inl" />
+    <None Include="headers\glm\gtx\handed_coordinate_space.inl" />
+    <None Include="headers\glm\gtx\hash.inl" />
+    <None Include="headers\glm\gtx\integer.inl" />
+    <None Include="headers\glm\gtx\intersect.inl" />
+    <None Include="headers\glm\gtx\io.inl" />
+    <None Include="headers\glm\gtx\log_base.inl" />
+    <None Include="headers\glm\gtx\matrix_cross_product.inl" />
+    <None Include="headers\glm\gtx\matrix_decompose.inl" />
+    <None Include="headers\glm\gtx\matrix_factorisation.inl" />
+    <None Include="headers\glm\gtx\matrix_interpolation.inl" />
+    <None Include="headers\glm\gtx\matrix_major_storage.inl" />
+    <None Include="headers\glm\gtx\matrix_operation.inl" />
+    <None Include="headers\glm\gtx\matrix_query.inl" />
+    <None Include="headers\glm\gtx\matrix_transform_2d.inl" />
+    <None Include="headers\glm\gtx\mixed_product.inl" />
+    <None Include="headers\glm\gtx\norm.inl" />
+    <None Include="headers\glm\gtx\normal.inl" />
+    <None Include="headers\glm\gtx\normalize_dot.inl" />
+    <None Include="headers\glm\gtx\optimum_pow.inl" />
+    <None Include="headers\glm\gtx\orthonormalize.inl" />
+    <None Include="headers\glm\gtx\pca.inl" />
+    <None Include="headers\glm\gtx\perpendicular.inl" />
+    <None Include="headers\glm\gtx\polar_coordinates.inl" />
+    <None Include="headers\glm\gtx\projection.inl" />
+    <None Include="headers\glm\gtx\quaternion.inl" />
+    <None Include="headers\glm\gtx\raw_data.inl" />
+    <None Include="headers\glm\gtx\rotate_normalized_axis.inl" />
+    <None Include="headers\glm\gtx\rotate_vector.inl" />
+    <None Include="headers\glm\gtx\scalar_relational.inl" />
+    <None Include="headers\glm\gtx\spline.inl" />
+    <None Include="headers\glm\gtx\std_based_type.inl" />
+    <None Include="headers\glm\gtx\string_cast.inl" />
+    <None Include="headers\glm\gtx\texture.inl" />
+    <None Include="headers\glm\gtx\transform.inl" />
+    <None Include="headers\glm\gtx\transform2.inl" />
+    <None Include="headers\glm\gtx\type_aligned.inl" />
+    <None Include="headers\glm\gtx\type_trait.inl" />
+    <None Include="headers\glm\gtx\vector_angle.inl" />
+    <None Include="headers\glm\gtx\vector_query.inl" />
+    <None Include="headers\glm\gtx\wrap.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_common.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_common_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_exponential.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_exponential_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_geometric.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_geometric_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_integer.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_integer_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_matrix.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_matrix_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_packing.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_packing_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_trigonometric.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_trigonometric_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_vector_relational.inl" />
+    <None Include="headers\vulkan\include\glm\detail\func_vector_relational_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_half.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat2x2.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat2x3.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat2x4.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat3x2.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat3x3.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat3x4.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat4x2.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat4x3.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat4x4.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_mat4x4_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_quat.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_quat_simd.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_vec1.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_vec2.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_vec3.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_vec4.inl" />
+    <None Include="headers\vulkan\include\glm\detail\type_vec4_simd.inl" />
+    <None Include="headers\vulkan\include\glm\ext\matrix_clip_space.inl" />
+    <None Include="headers\vulkan\include\glm\ext\matrix_common.inl" />
+    <None Include="headers\vulkan\include\glm\ext\matrix_projection.inl" />
+    <None Include="headers\vulkan\include\glm\ext\matrix_relational.inl" />
+    <None Include="headers\vulkan\include\glm\ext\matrix_transform.inl" />
+    <None Include="headers\vulkan\include\glm\ext\quaternion_common.inl" />
+    <None Include="headers\vulkan\include\glm\ext\quaternion_common_simd.inl" />
+    <None Include="headers\vulkan\include\glm\ext\quaternion_exponential.inl" />
+    <None Include="headers\vulkan\include\glm\ext\quaternion_geometric.inl" />
+    <None Include="headers\vulkan\include\glm\ext\quaternion_relational.inl" />
+    <None Include="headers\vulkan\include\glm\ext\quaternion_transform.inl" />
+    <None Include="headers\vulkan\include\glm\ext\quaternion_trigonometric.inl" />
+    <None Include="headers\vulkan\include\glm\ext\scalar_common.inl" />
+    <None Include="headers\vulkan\include\glm\ext\scalar_constants.inl" />
+    <None Include="headers\vulkan\include\glm\ext\scalar_integer.inl" />
+    <None Include="headers\vulkan\include\glm\ext\scalar_packing.inl" />
+    <None Include="headers\vulkan\include\glm\ext\scalar_relational.inl" />
+    <None Include="headers\vulkan\include\glm\ext\scalar_ulp.inl" />
+    <None Include="headers\vulkan\include\glm\ext\vector_common.inl" />
+    <None Include="headers\vulkan\include\glm\ext\vector_integer.inl" />
+    <None Include="headers\vulkan\include\glm\ext\vector_packing.inl" />
+    <None Include="headers\vulkan\include\glm\ext\vector_relational.inl" />
+    <None Include="headers\vulkan\include\glm\ext\vector_ulp.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\bitfield.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\color_space.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\constants.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\epsilon.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\integer.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\matrix_access.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\matrix_inverse.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\matrix_transform.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\noise.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\packing.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\quaternion.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\quaternion_simd.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\random.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\reciprocal.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\round.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\type_precision.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\type_ptr.inl" />
+    <None Include="headers\vulkan\include\glm\gtc\ulp.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\associated_min_max.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\bit.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\closest_point.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\color_encoding.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\color_space.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\color_space_YCoCg.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\common.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\compatibility.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\component_wise.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\dual_quaternion.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\easing.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\euler_angles.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\extend.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\extended_min_max.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\exterior_product.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\fast_exponential.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\fast_square_root.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\fast_trigonometry.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\float_notmalize.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\functions.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\gradient_paint.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\handed_coordinate_space.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\hash.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\integer.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\intersect.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\io.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\log_base.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\matrix_cross_product.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\matrix_decompose.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\matrix_factorisation.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\matrix_interpolation.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\matrix_major_storage.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\matrix_operation.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\matrix_query.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\matrix_transform_2d.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\mixed_product.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\norm.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\normal.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\normalize_dot.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\number_precision.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\optimum_pow.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\orthonormalize.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\perpendicular.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\polar_coordinates.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\projection.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\quaternion.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\raw_data.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\rotate_normalized_axis.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\rotate_vector.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\scalar_relational.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\spline.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\std_based_type.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\string_cast.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\texture.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\transform.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\transform2.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\type_aligned.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\type_trait.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\vector_angle.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\vector_query.inl" />
+    <None Include="headers\vulkan\include\glm\gtx\wrap.inl" />
+    <None Include="headers\vulkan\include\spirv-headers\spirv.hpp11" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
