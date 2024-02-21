@@ -1,0 +1,8 @@
+﻿  Collision.cpp
+  game_loop.cpp
+  Phys.cpp
+  PlayerController.cpp
+  RescManager.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  game_engine.vcxproj -> D:\gamengine\game_engine\x64\Debug\game_engine.exe
