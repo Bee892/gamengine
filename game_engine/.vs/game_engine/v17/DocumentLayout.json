@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\gamengine\\game_engine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FBA420A-0FB6-465C-BE54-CDE0D0082AD3}|game_engine\\game_engine.vcxproj|D:\\gamengine\\game_engine\\game_engine\\Phys.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5FBA420A-0FB6-465C-BE54-CDE0D0082AD3}|game_engine\\game_engine.vcxproj|solutionrelative:game_engine\\Phys.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5FBA420A-0FB6-465C-BE54-CDE0D0082AD3}|game_engine\\game_engine.vcxproj|D:\\gamengine\\game_engine\\game_engine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5FBA420A-0FB6-465C-BE54-CDE0D0082AD3}|game_engine\\game_engine.vcxproj|solutionrelative:game_engine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FBA420A-0FB6-465C-BE54-CDE0D0082AD3}|game_engine\\game_engine.vcxproj|D:\\gamengine\\game_engine\\game_engine\\Phys.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5FBA420A-0FB6-465C-BE54-CDE0D0082AD3}|game_engine\\game_engine.vcxproj|solutionrelative:game_engine\\Phys.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FBA420A-0FB6-465C-BE54-CDE0D0082AD3}|game_engine\\game_engine.vcxproj|D:\\gamengine\\game_engine\\game_engine\\PlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Phys.cpp",
               "DocumentMoniker": "D:\\gamengine\\game_engine\\game_engine\\Phys.cpp",
               "RelativeDocumentMoniker": "game_engine\\Phys.cpp",
@@ -58,8 +58,7 @@
               "RelativeToolTip": "game_engine\\Phys.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-02-21T05:49:44.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-21T05:49:44.427Z"
             },
             {
               "$type": "Document",
@@ -99,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\gamengine\\game_engine\\game_engine\\main.cpp",
               "RelativeDocumentMoniker": "game_engine\\main.cpp",
