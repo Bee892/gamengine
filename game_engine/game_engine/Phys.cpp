@@ -1,4 +1,4 @@
-#include <ode/ode.h>
+/*#include <libraries/ode/ode.h>
 #include <stdlib.h>
 
 class Phys {
@@ -68,4 +68,4 @@ public:
 		dWorldDestroy(worldID);
 		dCloseODE();
 	}
-};
+};*/
